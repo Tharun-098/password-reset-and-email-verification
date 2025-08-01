@@ -32,11 +32,11 @@ export const DataProvider=({children})=>{
     }
 
     useEffect(()=>{
-        getUser();
-    },[isLoggedIn])
-    useEffect(()=>{
         userAuthentication();
     },[])
+    useEffect(()=>{
+        getUser();
+    },[isLoggedIn])
     console.log(user);
     return (
         <DataContext.Provider value={{getUser,axios,setUser,user,isLoggedIn,setIsLoggedIn}}>
