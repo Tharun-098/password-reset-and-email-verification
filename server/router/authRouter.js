@@ -7,10 +7,10 @@ const authRouter=express.Router();
 authRouter.post('/register',register);
 authRouter.post('/login',login);
 authRouter.get('/logout',logout);
-authRouter.get('/isAuth',authenticateUser,authenticate);
 authRouter.post('/email/send-Otp',authenticateUser,sendVerifyOtp);
 authRouter.post('/email/verify',authenticateUser,verifyEmail);
 authRouter.post('/password/change',PasswordReset);
 authRouter.post('/password/reset-otp',resetOtp);
+authRouter.get('/isAuth',authenticateUser,authenticate);
 
 export default authRouter;
