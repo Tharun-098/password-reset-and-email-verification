@@ -11,9 +11,6 @@ const ProtectedRoute = ({ children }) => {
   if (!user?.isAccountVerify) {
     return <Navigate to="/email" replace />;
   }
-  if (isLoggedIn === null || user === undefined) {
-     return null;
-  }
   return children;
 };
 

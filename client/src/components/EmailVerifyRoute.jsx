@@ -5,6 +5,7 @@ import { DataContext } from "../context/DataContext";
 
 const EmailVerifyRoute = ({ children }) => {
   const { isLoggedIn, user } = useContext(DataContext);
+  
   if (isLoggedIn && user?.isAccountVerify) {
     return <Navigate to="/" replace />;
   }
