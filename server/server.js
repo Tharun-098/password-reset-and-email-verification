@@ -8,7 +8,7 @@ import authRouter from './router/authRouter.js';
 import userRouter from './router/userRouter.js';
 const app=express();
 const PORT=process.env.PORT || 4000;
-const allowedOrigins=['http://localhost:5173','https://password-reset-and-email-verificati-sigma.vercel.app']
+const allowedOrigins=['http://localhost:5173','https://password-frontend-five.vercel.app/']
 connectDb();
 
 app.use(cors({origin:allowedOrigins,credentials:true}));
